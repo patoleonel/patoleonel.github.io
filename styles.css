@@ -1,0 +1,343 @@
+/* ==========================================================================
+  A ver ese estiloooooo
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d; /* Negro profundo de fondo */
+    color: #8c8c8c;            /* Gris suave para el texto general, disminuye fatiga visual */
+    font-family: 'Courier New', Courier, monospace; /* Tipografía estilo consola */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Links globales */
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #4a90e2; /* Sutil azul tecnológico al pasar el cursor */
+}
+
+/* Títulos de secciones */
+h3 {
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   BARRA LATERAL FIJA (Izquierda)
+   ========================================================================== */
+.sidebar {
+    width: 260px;
+    background-color: #0a0a0a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #1a1a1a;
+    z-index: 100;
+}
+
+/* Foto de perfil circular */
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+    display: block;
+    filter: grayscale(30%);
+}
+
+/* Menú de navegación vertical */
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 25px;
+}
+
+.nav-links a {
+    color: #595959; /* Apagado por defecto como la referencia */
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+    color: #f2f2f2;
+}
+
+/* Selector de idioma abajo de la barra */
+.sidebar-bottom {
+    font-size: 0.8rem;
+    color: #595959;
+    letter-spacing: 1px;
+}
+
+.lang-toggle {
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   ÁREA DE CONTENIDO (Derecha)
+   ========================================================================== */
+.main-content {
+    margin-left: 260px; /* Desplazamiento para no taparse con la barra lateral */
+    flex: 1;
+    padding: 80px 60px;
+    max-width: 1000px; /* Evita que las líneas de texto se estiren demasiado */
+}
+
+/* Bloques de contenido separados */
+.section-block {
+    padding: 50px 0;
+    border-bottom: 1px solid #141414; /* Separadores finos y sutiles */
+}
+
+/* ==========================================================================
+   SECCIÓN HERO / PRESENTACIÓN SUPERIOR
+   ========================================================================== */
+.hero-section {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #141414;
+}
+
+.hero-section h1 {
+    color: #f2f2f2;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-section h2 {
+    color: #e6e6e6;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    max-width: 700px;
+}
+
+.contact-links {
+    font-size: 0.85rem;
+    color: #404040;
+}
+
+.contact-links a {
+    margin: 0 5px;
+}
+
+/* Párrafos generales de contenido */
+.section-block p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #e6e6e6;
+    background-color: #121212;
+    padding: 12px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   CONTENEDOR DE VIDEO RESPONSIVO (YouTube)
+   ========================================================================== */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    border: 1px solid #1a1a1a;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   LÍNEA DE TIEMPO (Timeline)
+   ========================================================================== */
+.timeline {
+    border-left: 1px solid #262626;
+    padding-left: 25px;
+    margin-left: 5px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* El puntito de la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    background-color: #0d0d0d;
+    border: 1px solid #8c8c8c;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #595959;
+    margin-bottom: 5px;
+}
+
+.timeline-item h4 {
+    color: #f2f2f2;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.company {
+    display: block;
+    font-size: 0.9rem;
+    color: #4a90e2;
+    margin-bottom: 12px;
+}
+
+.timeline-item ul {
+    list-style-type: '- '; /* Viñeta minimalista de consola */
+    padding-left: 15px;
+}
+
+.timeline-item li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   GRILLA DE PROYECTOS Y TARJETAS
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card, .quest-item {
+    background-color: #121212;
+    border: 1px solid #1a1a1a;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.project-card h4, .quest-item h4 {
+    color: #f2f2f2;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project-card p, .quest-item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Elementos de Side Quests */
+.quests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Footer */
+.main-footer {
+    padding-top: 40px;
+    font-size: 0.8rem;
+    color: #404040;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (Para Celulares y Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Apila barra lateral y contenido verticalmente */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px 20px;
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 0;
+    }
+
+    .sidebar-bottom {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Elimina el margen en celular */
+        padding: 40px 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+}
