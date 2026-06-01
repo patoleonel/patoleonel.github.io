@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTimeline();
     setupHoverTooltips();
     renderProjects();
+    initMobileModal();
     
     // Draw lines after a slight delay to ensure DOM is fully rendered
     setTimeout(drawConnections, 100);
@@ -339,6 +340,62 @@ function setupHoverTooltips() {
     const tooltip = document.getElementById('image-tooltip');
 
     nodes.forEach(node => {
+        // Mobile tap interaction
+        node.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                const nodeId = node.getAttribute('data-id');
+                let dataObj = null;
+                if (domNodes.academic[nodeId]) dataObj = domNodes.academic[nodeId].data;
+                else if (domNodes.professional[nodeId]) dataObj = domNodes.professional[nodeId].data;
+                else if (domNodes.takeaways[nodeId]) dataObj = domNodes.takeaways[nodeId].data;
+                
+                if (dataObj) {
+                    const modalBody = document.getElementById('mobile-modal-body');
+                    const type = node.getAttribute('data-type');
+                    
+                    const titleEn = dataObj.title_en || '';
+                    const titleEs = dataObj.title_es || '';
+                    const isQuantum = titleEn.toLowerCase().includes('quantum') || titleEs.toLowerCase().includes('quantum') || titleEn.toLowerCase().includes('qiskit');
+                    const isSistemas = titleEn.toLowerCase().includes('utn') || titleEs.toLowerCase().includes('utn');
+                    
+                    let quantumGallery = '';
+                    if (isQuantum) {
+                        quantumGallery = `
+                            <div class="quantum-inline-gallery">
+                                <img src="images/certificado quantum JAM.webp" alt="Quantum Jam">
+                                <img src="images/image1quantum.webp" alt="Quantum 1">
+                                <img src="images/image2quantum.webp" alt="Quantum 2">
+                                <img src="images/image3quantum.webp" alt="Quantum 3">
+                                <img src="images/image4quantum.webp" alt="Quantum 4">
+                            </div>
+                        `;
+                    } else if (isSistemas) {
+                        quantumGallery = `
+                            <div class="single-inline-gallery">
+                                <img src="images/IngresoUTN.webp" alt="Ingreso UTN">
+                            </div>
+                        `;
+                    }
+
+                    if (type === 'takeaway') {
+                        modalBody.innerHTML = `
+                            <h3 class="node-title">${dataObj['description_' + currentLang]}</h3>
+                        `;
+                    } else {
+                        modalBody.innerHTML = `
+                            <span class="node-year" style="display:block; margin-bottom: 0.5rem; color: var(--text-main); font-family: 'Outfit', sans-serif;">${dataObj.year}</span>
+                            <h3 class="node-title">${dataObj['title_' + currentLang]}</h3>
+                            <p class="node-desc">${dataObj['description_' + currentLang]}</p>
+                            ${quantumGallery}
+                        `;
+                    }
+                    
+                    document.getElementById('mobile-modal').classList.add('show');
+                }
+            }
+        });
+
+        // Desktop hover interactions
         node.addEventListener('mouseenter', (e) => {
             const nodeId = node.getAttribute('data-id');
             const connections = JSON.parse(node.getAttribute('data-connections') || '[]');
@@ -396,6 +453,23 @@ function setupHoverTooltips() {
                 });
             }
         });
+    });
+}
+
+function initMobileModal() {
+    const modal = document.getElementById('mobile-modal');
+    const closeBtn = document.getElementById('close-modal');
+    
+    if (!modal || !closeBtn) return;
+    
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
     });
 }
 
