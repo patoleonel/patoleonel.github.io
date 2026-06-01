@@ -81,13 +81,11 @@ const connectionObserver = new ResizeObserver(() => {
 
 document.addEventListener('DOMContentLoaded', () => {
     initLanguageToggle();
-    renderTimeline();
-    setupHoverTooltips();
     renderProjects();
     initMobileModal();
     
-    // Draw lines after a slight delay to ensure DOM is fully rendered
-    setTimeout(drawConnections, 100);
+    // Enforce default language across the whole page on first load
+    setLanguage(currentLang);
     
     window.addEventListener('resize', () => {
         // Debounce resize
