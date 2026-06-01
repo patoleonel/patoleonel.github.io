@@ -277,14 +277,30 @@ a:hover {
 
 .node-title {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     color: var(--text-light);
+    transition: margin-bottom 0.4s ease;
 }
 
 .node-desc {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--text-main);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.milestone-node:hover .node-title {
+    margin-bottom: 0.5rem;
+}
+
+.milestone-node:hover .node-desc {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 0.5rem;
 }
 
 /* Specific styling for Takeaway Nodes */

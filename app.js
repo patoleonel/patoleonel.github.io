@@ -172,9 +172,20 @@ function createNodeElement(item, type) {
     }
 
     if (type === 'takeaway') {
-        div.innerHTML = `
-            <h3 class="node-title">${item['description_' + currentLang]}</h3>
-        `;
+        const fullDesc = item['description_' + currentLang];
+        const splitIdx = fullDesc.indexOf(':');
+        if (splitIdx > -1) {
+            const title = fullDesc.substring(0, splitIdx);
+            const desc = fullDesc.substring(splitIdx + 1).trim();
+            div.innerHTML = `
+                <h3 class="node-title">${title}</h3>
+                <p class="node-desc">${desc}</p>
+            `;
+        } else {
+            div.innerHTML = `
+                <h3 class="node-title">${fullDesc}</h3>
+            `;
+        }
     } else {
         div.innerHTML = `
             <span class="node-year">${item.year}</span>
@@ -378,9 +389,20 @@ function setupHoverTooltips() {
                     }
 
                     if (type === 'takeaway') {
-                        modalBody.innerHTML = `
-                            <h3 class="node-title">${dataObj['description_' + currentLang]}</h3>
-                        `;
+                        const fullDesc = dataObj['description_' + currentLang];
+                        const splitIdx = fullDesc.indexOf(':');
+                        if (splitIdx > -1) {
+                            const title = fullDesc.substring(0, splitIdx);
+                            const desc = fullDesc.substring(splitIdx + 1).trim();
+                            modalBody.innerHTML = `
+                                <h3 class="node-title">${title}</h3>
+                                <p class="node-desc">${desc}</p>
+                            `;
+                        } else {
+                            modalBody.innerHTML = `
+                                <h3 class="node-title">${fullDesc}</h3>
+                            `;
+                        }
                     } else {
                         modalBody.innerHTML = `
                             <span class="node-year" style="display:block; margin-bottom: 0.5rem; color: var(--text-main); font-family: 'Outfit', sans-serif;">${dataObj.year}</span>
