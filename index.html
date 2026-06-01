@@ -3,153 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patricio Brite | Systems Engineering Portfolio</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Patricio Brite | Interactive Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
+    <!-- Sidebar -->
     <nav class="sidebar">
         <div class="sidebar-top">
-            <img src="profile.png" alt="Patricio Leonel Brite" class="profile-pic">
+            <img src="images/profile.webp" alt="Patricio Leonel Brite" class="profile-pic">
             <ul class="nav-links">
-                <li><a href="#about">SOBRE MI</a></li>
-                <li><a href="#video">INTRO VIDEO</a></li>
-                <li><a href="#journey">EXPERIENCIA</a></li>
-                <li><a href="#projects">PROYECTOS</a></li>
-                <li><a href="#side-quests">SIDE QUESTS</a></li>
+                <li><a href="#video-section" id="nav-video">INTRO VIDEO</a></li>
+                <li><a href="#timeline-section" id="nav-spiderweb">MY JOURNEY</a></li>
+                <li><a href="#projects" id="nav-projects">PROYECTOS</a></li>
+                <li><a href="#sidequests" id="nav-sidequests">SIDE QUESTS</a></li>
             </ul>
         </div>
         <div class="sidebar-bottom">
-            <span class="lang-toggle">EN | ES</span>
+            <div class="contact-links">
+                <a href="mailto:brite878@gmail.com">brite878@gmail.com</a>
+                <a href="https://www.linkedin.com/in/patricioLeonelBrite/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/patoleonel" target="_blank">GitHub</a>
+            </div>
+            <div class="lang-toggle-container">
+                <button id="lang-es" class="lang-btn">ES</button>
+                <span class="divider">|</span>
+                <button id="lang-en" class="lang-btn active">EN</button>
+            </div>
         </div>
     </nav>
 
     <main class="main-content">
-        
-        <header class="hero-section">
-            <h1>Patricio Leonel Brite</h1>
-            <h2>Information Systems Engineering Student @ UTN FRBA</h2>
-            <p class="hero-subtitle">Bridging the gap between creative storytelling and logical problem-solving.</p>
-            <div class="contact-links">
-                <a href="mailto:brite878@gmail.com">brite878@gmail.com</a> | 
-                <a href="https://www.linkedin.com/in/patricioLeonelBrite/" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/patoleonel" target="_blank">GitHub</a>
-            </div>
-        </header>
-
-        <section id="about" class="section-block">
-            <h3>ABOUT ME</h3>
-            <p>
-                I am a second-year Information Systems Engineering student at UTN F.R.B.A. 
-                My background in filmmaking gave me a unique, multidisciplinary approach to problem-solving. 
-                I combine logic and creativity to tackle challenges with an "out of the box" mindset. 
-                I have experience working in teams and leading projects, and I am currently looking to join 
-                a tech environment where I can transform complex problems into efficient, innovative solutions.
-            </p>
-            <div class="tech-stack">
-                <strong>Core Tools:</strong> C++ // Python // SQL // Git // PostgreSQL // Docker
-            </div>
-        </section>
-
-        <section id="video" class="section-block">
-            <h3>INTRO VIDEO</h3>
+        <!-- Section 1: Intro Video -->
+        <section id="video-section" class="video-container">
+            <h1 id="hero-title">Welcome to my journey</h1>
+            <p id="hero-subtitle">Below, you can explore my interconnected academic and professional paths.</p>
             <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/VIDEO_ID" 
-                    title="Patricio Brite - Video Presentation" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                <div class="video-placeholder">
+                    <p id="video-placeholder-text">Próximamente link video presentación en inglés</p>
+                </div>
             </div>
         </section>
 
-        <section id="journey" class="section-block">
-            <h3>MY JOURNEY</h3>
-            <div class="timeline">
-                
-                <article class="timeline-item">
-                    <span class="timeline-date">Jul 2025 - Jan 2026</span>
-                    <h4>General Management Intern</h4>
-                    <span class="company">OSPRERA</span>
-                    <ul>
-                        <li>Performed functional analysis of requirements in Purchasing, Beneficiaries, and Settlements.</li>
-                        <li>Designed and developed a settlement calculator using Python and JavaScript.</li>
-                        <li>Dockerized the project using Gemini within Antigravity.</li>
-                        <li>Worked in an Agile environment (Scrum/Kanban) using Atlassian tools and Git flow for version control.</li>
-                        <li>Managed data and delivered annual settlement reports using PowerBI.</li>
-                    </ul>
-                </article>
+        <!-- Section 2: Spiderweb Timeline -->
+        <section id="timeline-section" class="timeline-container">
+            
+            <!-- SVG Canvas for the Spiderweb connections -->
+            <svg id="spiderweb-canvas"></svg>
 
-                <article class="timeline-item">
-                    <span class="timeline-date">Apr 2025 - May 2025</span>
-                    <h4>QA Tester</h4>
-                    <span class="company">Grupo MSA</span>
-                    <ul>
-                        <li>Detected and reported software bugs in electronic voting machines.</li>
-                    </ul>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-date">May 2023 - Apr 2025</span>
-                    <h4>Administrative Manager</h4>
-                    <span class="company">Egolf</span>
-                    <ul>
-                        <li>Created an automated inventory management system using Google Sheets, eliminating manual stock counting.</li>
-                        <li>Developed financial tracking systems to monitor daily sales, costs, income, and overall business profitability.</li>
-                    </ul>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-date">Dec 2021 - Apr 2023</span>
-                    <h4>Lighting Technician</h4>
-                    <span class="company">BoxFish</span>
-                    <ul>
-                        <li>Learned to work under tight production deadlines, mastering the ability to prioritize essential decisions in fast-paced team environments.</li>
-                    </ul>
-                </article>
-
+            <div class="timeline-titles">
+                <h2 class="col-title" id="title-academic">Academic Milestones</h2>
+                <h2 class="col-title" id="title-takeaways">Key Takeaways</h2>
+                <h2 class="col-title" id="title-professional">Professional Milestones</h2>
+            </div>
+            
+            <div id="timeline-grid-nodes" class="timeline-grid">
+                <!-- Nodes will be injected here via JS to form perfect rows -->
             </div>
         </section>
 
-        <section id="projects" class="section-block">
-            <h3>HIGHLIGHTED PROJECTS</h3>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h4>Cabin Rental Management System</h4>
-                    <p>A full-stack web application designed to manage lodging reservations. Built utilizing Python, Django, and PostgreSQL to handle robust database modeling and dynamic content generation.</p>
-                </article>
-                <article class="project-card">
-                    <h4>Custom 2D Platformer Game</h4>
-                    <p>Designed and developed a 2D platformer from scratch, managing game logic, basic physics, and custom visual assets.</p>
-                </article>
+        <!-- Section 3: Projects (Placeholder for JS rendering) -->
+        <section id="projects" class="projects-container">
+            <h2 id="title-projects">Projects & Works</h2>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be injected here via JS -->
             </div>
         </section>
 
-        <section id="side-quests" class="section-block">
-            <h3>SIDE QUESTS & CONTINUOUS LEARNING</h3>
-            <div class="quests-list">
-                <article class="quest-item">
-                    <h4>Quantum Computing & IBM Qiskit</h4>
-                    <p>Self-taught study and practical experimentation with the IBM Qiskit SDK using Python. Deeply interested in exploring quantum protocols (such as BB84), Hadamard gates, and quantum entanglement.</p>
-                </article>
-                <article class="quest-item">
-                    <h4>Academic Research</h4>
-                    <p>Established a routine of reading and analyzing scientific academic papers to maintain a high level of technical literacy and stay updated on emerging technologies.</p>
-                </article>
-                <article class="quest-item">
-                    <h4>Languages</h4>
-                    <p><strong>English:</strong> B2 Level (Currently preparing for the C1 Advanced Cambridge Certification).</p>
-                </article>
-            </div>
+        <!-- Section 4: Side Quests -->
+        <section id="sidequests" class="projects-container">
+            <h2 id="title-sidequests">Side Quests</h2>
+            <ul class="sidequests-list">
+                <li id="sq-1" class="expandable-node">
+                    <span id="sq-1-text">Golf handicap 13</span>
+                    <div class="quantum-inline-gallery">
+                        <img src="images/golf.webp" alt="Golf">
+                        <img src="images/logo_Egolf.webp" alt="eGolf Logo">
+                    </div>
+                </li>
+                <li id="sq-2" class="expandable-node">
+                    <span id="sq-2-text">Quantum Learner</span>
+                    <div class="quantum-inline-gallery">
+                        <img src="images/certificado quantum JAM.webp" alt="Quantum Jam">
+                        <img src="images/image1quantum.webp" alt="Quantum 1">
+                        <img src="images/image2quantum.webp" alt="Quantum 2">
+                        <img src="images/image3quantum.webp" alt="Quantum 3">
+                        <img src="images/image4quantum.webp" alt="Quantum 4">
+                    </div>
+                </li>
+                <li id="sq-3">C1 English Course at Wuthering Heights</li>
+                <li id="sq-4">Software Developer Course (Data, AI, Cloud)</li>
+            </ul>
         </section>
 
-        <footer class="main-footer">
-            <p>&copy; 2026 Patricio Leonel Brite. Built from scratch.</p>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Patricio Leonel Brite.</p>
         </footer>
-
     </main>
 
+    <!-- Image Hover Tooltip -->
+    <div id="image-tooltip" class="image-tooltip">
+        <img id="tooltip-img" src="" alt="Milestone Image">
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
 </body>
 </html>
