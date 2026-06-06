@@ -1,29 +1,29 @@
 const portfolioData = {
-  "academicMilestones": [
-    { "id": "acad_1", "year": 2014, "title_en": "High School Graduation", "title_es": "Graduación de Secundaria", "description_en": "Graduated from San Andrés High School with GPA 9.28.", "description_es": "Graduado del Colegio San Andrés con promedio 9.28.", "connections": ["takeaway_1"] },
-    { "id": "acad_2", "year": "2015-2016", "title_en": "Industrial Engineering at UNLZ", "title_es": "Ingeniería Industrial en UNLZ", "description_en": "First approach to handling frustration.", "description_es": "Primer acercamiento a la tolerancia a la frustración.", "connections": ["takeaway_2"] },
-    { "id": "acad_3", "year": "2017-2020", "title_en": "Film Directing at IDAC", "title_es": "Realización Cinematográfica en IDAC", "description_en": "Learned about storytelling, techniques, and the underlying math/physics of film tools. Directed 3 short films.", "description_es": "Aprendizaje de narrativa, técnicas y la matemática/física de las herramientas del cine. Dirección de 3 cortometrajes.", "connections": ["takeaway_3"] },
-    { "id": "acad_4", "year": "2021-2022", "title_en": "Engineering Pause", "title_es": "Pausa en Ingeniería", "description_en": "Academic break to focus on TV production.", "description_es": "Pausa académica para enfocarse en producción televisiva.", "connections": ["takeaway_4"] },
-    { "id": "acad_5", "year": "2023-Present", "title_en": "Information Systems Engineering at UTN FRBA", "title_es": "Ingeniería en Sistemas de Información en UTN FRBA", "description_en": "Restarted the career to refresh mathematical foundations.", "description_es": "Reinicio de la carrera para refrescar las bases matemáticas.", "connections": ["takeaway_5", "takeaway_6", "takeaway_7"] }
-  ],
-  "professionalMilestones": [
-    { "id": "prof_1", "year": "2013-2014", "title_en": "Early Egolf Control Systems", "title_es": "Sistemas de Control Egolf Tempranos", "description_en": "Created sheets for financial and stock control.", "description_es": "Creación de planillas de control financiero y stock.", "connections": ["takeaway_1"] },
-    { "id": "prof_2", "year": "2015-2016", "title_en": "Operations at Egolf", "title_es": "Operaciones en Egolf", "description_en": "Continued business operations while studying.", "description_es": "Continuidad en las operaciones del negocio mientras se estudia.", "connections": ["takeaway_2"] },
-    { "id": "prof_3", "year": "2017-2020", "title_en": "Film Productions (Crews, Equipment, Budgets)", "title_es": "Producciones Cinematográficas (Equipos, Material, Presupuestos)", "description_en": "Directed and managed resources for 3 short films.", "description_es": "Dirección y gestión de recursos para 3 cortometrajes.", "connections": ["takeaway_3"] },
-    { "id": "prof_4", "year": 2021, "title_en": "BoxFish TV Production", "title_es": "Producción de TV en BoxFish", "description_en": "Worked under high-pressure real-time industry deadlines.", "description_es": "Trabajo bajo la presión extrema de los tiempos reales de la industria televisiva.", "connections": ["takeaway_4"] },
-    { "id": "prof_5", "year": "2023-2025", "title_en": "Grupo MSA (QA Tester) & Egolf (Marketing/Tech)", "title_es": "Grupo MSA (QA Tester) y Egolf (Marketing/Tecnología)", "description_en": "Merged creative and technical skills.", "description_es": "Integración de habilidades creativas y técnicas.", "connections": ["takeaway_5"] },
-    { "id": "prof_6", "year": 2025, "title_en": "Software Engineering Internship at OSPRERA", "title_es": "Pasantía en Desarrollo de Software en OSPRERA", "description_en": "Recognized processes and implemented software solutions with agile methodologies.", "description_es": "Relevamiento de procesos e implementación de soluciones software bajo marcos ágiles.", "connections": ["takeaway_6"] },
-    { "id": "prof_7", "year": "2026-Present", "title_en": "Egolf Operations (Part-time)", "title_es": "Operaciones Egolf (Part-time)", "description_en": "Continuing business support while focusing on studies.", "description_es": "Apoyo continuo al negocio mientras se enfoca en los estudios.", "connections": ["takeaway_7"] }
-  ],
-  "keyTakeaways": [
-    { "id": "takeaway_1", "description_en": "Dual Passion & Responsibility: Developed early skills in business responsibility, scheduling, and asset management while embracing the dual passion for arts and hard sciences.", "description_es": "Pasión doble y Responsabilidad: Desarrollo temprano de responsabilidad, gestión comercial y control de flujo de trabajo mientras se acepta la doble pasión por el arte y las ciencias duras." },
-    { "id": "takeaway_2", "description_en": "Frustration Tolerance & Work Ethic: Balanced academic rigor with real-world business operations.", "description_es": "Tolerancia a la Frustración y Ética de Trabajo: Equilibrio entre el rigor analítico académico y la operatividad de un negocio." },
-    { "id": "takeaway_3", "description_en": "Creative Adaptability & Physics in Art: Discovered optics and inverse square laws. Mastered leadership under tight budget constraints and communication in film sets.", "description_es": "Adaptación Creativa y Física en el Arte: Descubrimiento de óptica y leyes del cuadrado de la distancia. Liderazgo bajo presión de presupuesto y comunicación en rodajes." },
-    { "id": "takeaway_4", "description_en": "High-Pressure Real-Time Industry & Valuing Stability: Operates under strict deadlines. Realized personal need for long-term career stability.", "description_es": "Industria de Alta Presión en Tiempo Real y Valoración de Estabilidad: Operaciones bajo plazos estrictos. Reconocimiento de la necesidad personal de estabilidad profesional a largo plazo." },
-    { "id": "takeaway_5", "description_en": "Bridging Creative Problem-Solving & Software Quality: Integrated creative thinking with the logical structure of testing and systems development.", "description_es": "Puente entre Resolución Creativa y Calidad de Software: Integración definitiva del pensamiento creativo con la lógica estructural del testeo y desarrollo de sistemas." },
-    { "id": "takeaway_6", "description_en": "Agile Collaboration & Self-Taught Technical Application: Mastered team collaboration in software development and applied self-taught quantum mechanics concepts in a competitive setting.", "description_es": "Colaboración Ágil y Aplicación Técnica Autodidacta: Dominio del trabajo colaborativo en desarrollo de software y aplicación de conceptos autodidactas de mecánica cuántica en un entorno competitivo." },
-    { "id": "takeaway_7", "description_en": "Continuous Learning & Structural Societal Contribution: Deepened focus on advanced technology to make a meaningful contribution to society.", "description_es": "Aprendizaje Continuo y Contribución Social Estructural: Enfoque absoluto en la tecnología avanzada para aportar soluciones de valor a la sociedad." }
-  ]
+    "academicMilestones": [
+        { "id": "acad_1", "year": 2014, "title_en": "High School Graduation", "title_es": "Graduación de Secundaria", "description_en": "Graduated from San Andrés High School with GPA 9.28.", "description_es": "Graduado del Colegio San Andrés con promedio 9.28.", "connections": ["takeaway_1"] },
+        { "id": "acad_2", "year": "2015-2016", "title_en": "Industrial Engineering at UNLZ", "title_es": "Ingeniería Industrial en UNLZ", "description_en": "First approach to handling frustration.", "description_es": "Primer acercamiento a la tolerancia a la frustración.", "connections": ["takeaway_2"] },
+        { "id": "acad_3", "year": "2017-2020", "title_en": "Film Directing at IDAC", "title_es": "Realización Cinematográfica en IDAC", "description_en": "Learned about storytelling, techniques, and the underlying math/physics of film tools. Directed 3 short films.", "description_es": "Aprendizaje de narrativa, técnicas y la matemática/física de las herramientas del cine. Dirección de 3 cortometrajes.", "connections": ["takeaway_3"] },
+        { "id": "acad_4", "year": "2021-2022", "title_en": "Engineering Pause", "title_es": "Pausa en Ingeniería", "description_en": "Academic break to focus on TV production.", "description_es": "Pausa académica para enfocarse en producción televisiva.", "connections": ["takeaway_4"] },
+        { "id": "acad_5", "year": "2023-Present", "title_en": "Information Systems Engineering at UTN FRBA", "title_es": "Ingeniería en Sistemas de Información en UTN FRBA", "description_en": "Restarted the career to refresh mathematical foundations.", "description_es": "Reinicio de la carrera para refrescar las bases matemáticas.", "connections": ["takeaway_5", "takeaway_6", "takeaway_7"] }
+    ],
+    "professionalMilestones": [
+        { "id": "prof_1", "year": "2013-2014", "title_en": "Early Egolf Control Systems", "title_es": "Sistemas de Control Egolf Tempranos", "description_en": "Created sheets for financial and stock control.", "description_es": "Creación de planillas de control financiero y stock.", "connections": ["takeaway_1"] },
+        { "id": "prof_2", "year": "2015-2016", "title_en": "Operations at Egolf", "title_es": "Operaciones en Egolf", "description_en": "Continued business operations while studying.", "description_es": "Continuidad en las operaciones del negocio mientras se estudia.", "connections": ["takeaway_2"] },
+        { "id": "prof_3", "year": "2017-2020", "title_en": "Film Productions (Crews, Equipment, Budgets)", "title_es": "Producciones Cinematográficas (Equipos, Material, Presupuestos)", "description_en": "Directed and managed resources for 3 short films.", "description_es": "Dirección y gestión de recursos para 3 cortometrajes.", "connections": ["takeaway_3"] },
+        { "id": "prof_4", "year": 2021, "title_en": "BoxFish TV Production", "title_es": "Producción de TV en BoxFish", "description_en": "Worked under high-pressure real-time industry deadlines.", "description_es": "Trabajo bajo la presión extrema de los tiempos reales de la industria televisiva.", "connections": ["takeaway_4"] },
+        { "id": "prof_5", "year": "2023-2025", "title_en": "Grupo MSA (QA Tester) & Egolf (Marketing/Tech)", "title_es": "Grupo MSA (QA Tester) y Egolf (Marketing/Tecnología)", "description_en": "Merged creative and technical skills.", "description_es": "Integración de habilidades creativas y técnicas.", "connections": ["takeaway_5"] },
+        { "id": "prof_6", "year": 2025, "title_en": "Software Engineering Internship at OSPRERA", "title_es": "Pasantía en Desarrollo de Software en OSPRERA", "description_en": "Recognized processes and implemented software solutions with agile methodologies.", "description_es": "Relevamiento de procesos e implementación de soluciones software bajo marcos ágiles.", "connections": ["takeaway_6"] },
+        { "id": "prof_7", "year": "2026-Present", "title_en": "Egolf Operations (Part-time)", "title_es": "Operaciones Egolf (Part-time)", "description_en": "Continuing business support while focusing on studies.", "description_es": "Apoyo continuo al negocio mientras se enfoca en los estudios.", "connections": ["takeaway_7"] }
+    ],
+    "keyTakeaways": [
+        { "id": "takeaway_1", "description_en": "Dual Passion & Responsibility: Developed early skills in business responsibility, scheduling, and asset management while embracing the dual passion for arts and hard sciences.", "description_es": "Pasión doble y Responsabilidad: Desarrollo temprano de responsabilidad, gestión comercial y control de flujo de trabajo mientras se acepta la doble pasión por el arte y las ciencias duras." },
+        { "id": "takeaway_2", "description_en": "Frustration Tolerance & Work Ethic: Balanced academic rigor with real-world business operations.", "description_es": "Tolerancia a la Frustración y Ética de Trabajo: Equilibrio entre el rigor analítico académico y la operatividad de un negocio." },
+        { "id": "takeaway_3", "description_en": "Creative Adaptability & Physics in Art: Discovered optics and inverse square laws. Mastered leadership under tight budget constraints and communication in film sets.", "description_es": "Adaptación Creativa y Física en el Arte: Descubrimiento de óptica y leyes del cuadrado de la distancia. Liderazgo bajo presión de presupuesto y comunicación en rodajes." },
+        { "id": "takeaway_4", "description_en": "High-Pressure Real-Time Industry & Valuing Stability: Operates under strict deadlines. Realized personal need for long-term career stability.", "description_es": "Industria de Alta Presión en Tiempo Real y Valoración de Estabilidad: Operaciones bajo plazos estrictos. Reconocimiento de la necesidad personal de estabilidad profesional a largo plazo." },
+        { "id": "takeaway_5", "description_en": "Bridging Creative Problem-Solving & Software Quality: Integrated creative thinking with the logical structure of testing and systems development.", "description_es": "Puente entre Resolución Creativa y Calidad de Software: Integración definitiva del pensamiento creativo con la lógica estructural del testeo y desarrollo de sistemas." },
+        { "id": "takeaway_6", "description_en": "Agile Collaboration & Self-Taught Technical Application: Mastered team collaboration in software development and applied self-taught quantum mechanics concepts in a competitive setting.", "description_es": "Colaboración Ágil y Aplicación Técnica Autodidacta: Dominio del trabajo colaborativo en desarrollo de software y aplicación de conceptos autodidactas de mecánica cuántica en un entorno competitivo." },
+        { "id": "takeaway_7", "description_en": "Continuous Learning & Structural Societal Contribution: Deepened focus on advanced technology to make a meaningful contribution to society.", "description_es": "Aprendizaje Continuo y Contribución Social Estructural: Enfoque absoluto en la tecnología avanzada para aportar soluciones de valor a la sociedad." }
+    ]
 };
 
 let currentLang = 'en';
@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguageToggle();
     renderProjects();
     initMobileModal();
-    
+
     // Enforce default language across the whole page on first load
     setLanguage(currentLang);
-    
+
     window.addEventListener('resize', () => {
         // Debounce resize
         clearTimeout(window.resizeTimer);
@@ -104,7 +104,7 @@ function initLanguageToggle() {
 
 function setLanguage(lang) {
     currentLang = lang;
-    
+
     // Update active button
     document.getElementById('lang-en').classList.toggle('active', lang === 'en');
     document.getElementById('lang-es').classList.toggle('active', lang === 'es');
@@ -115,7 +115,7 @@ function setLanguage(lang) {
     document.getElementById('title-academic').innerText = i18n[lang].colAcad;
     document.getElementById('title-professional').innerText = i18n[lang].colProf;
     document.getElementById('title-takeaways').innerText = i18n[lang].colTake;
-    
+
     document.getElementById('nav-video').innerText = i18n[lang].navVideo;
     document.getElementById('nav-spiderweb').innerText = i18n[lang].navSpiderweb;
     document.getElementById('nav-projects').innerText = i18n[lang].navProjects;
@@ -126,12 +126,13 @@ function setLanguage(lang) {
     document.getElementById('sq-2-text').innerText = i18n[lang].sq2;
     document.getElementById('sq-3').innerText = i18n[lang].sq3;
     document.getElementById('sq-4').innerText = i18n[lang].sq4;
-    
+
     const videoText = document.getElementById('video-placeholder-text');
     if (videoText) videoText.innerText = i18n[lang].videoPlaceholder;
 
     // Re-render nodes to update text
     renderTimeline();
+    renderProjects();
     setupHoverTooltips();
     setTimeout(drawConnections, 50);
 }
@@ -149,7 +150,7 @@ function createNodeElement(item, type) {
     const titleEs = item.title_es || '';
     const isQuantum = titleEn.toLowerCase().includes('quantum') || titleEs.toLowerCase().includes('quantum') || titleEn.toLowerCase().includes('qiskit');
     const isSistemas = titleEn.toLowerCase().includes('utn') || titleEs.toLowerCase().includes('utn');
-    
+
     let quantumGallery = '';
     if (isQuantum) {
         quantumGallery = `
@@ -250,9 +251,9 @@ function renderTimeline() {
 function drawConnections() {
     const svg = document.getElementById('spiderweb-canvas');
     svg.innerHTML = ''; // clear existing lines
-    
+
     const svgRect = svg.getBoundingClientRect();
-    
+
     // Helper to get relative coordinates
     const getCoords = (elem) => {
         const rect = elem.getBoundingClientRect();
@@ -271,16 +272,16 @@ function drawConnections() {
     const acadNodesList = Object.values(domNodes.academic);
     for (let i = 0; i < acadNodesList.length - 1; i++) {
         const start = getCoords(acadNodesList[i].elem);
-        const end = getCoords(acadNodesList[i+1].elem);
-        createLine(svg, start, end, acadNodesList[i].data.id, acadNodesList[i+1].data.id, true);
+        const end = getCoords(acadNodesList[i + 1].elem);
+        createLine(svg, start, end, acadNodesList[i].data.id, acadNodesList[i + 1].data.id, true);
     }
 
     // Professional vertical line
     const profNodesList = Object.values(domNodes.professional);
     for (let i = 0; i < profNodesList.length - 1; i++) {
         const start = getCoords(profNodesList[i].elem);
-        const end = getCoords(profNodesList[i+1].elem);
-        createLine(svg, start, end, profNodesList[i].data.id, profNodesList[i+1].data.id, true);
+        const end = getCoords(profNodesList[i + 1].elem);
+        createLine(svg, start, end, profNodesList[i].data.id, profNodesList[i + 1].data.id, true);
     }
 
     // --- Horizontal/Diagonal Takeaway Lines ---
@@ -288,10 +289,10 @@ function drawConnections() {
     Object.values(domNodes.academic).forEach(nodeObj => {
         const { elem, data } = nodeObj;
         const startCoords = getCoords(elem);
-        
+
         // Start from the right edge of the academic node
         const start = { x: startCoords.rightEdge, y: startCoords.y };
-        
+
         data.connections.forEach(targetId => {
             if (domNodes.takeaways[targetId]) {
                 const endCoords = getCoords(domNodes.takeaways[targetId].elem);
@@ -306,10 +307,10 @@ function drawConnections() {
     Object.values(domNodes.professional).forEach(nodeObj => {
         const { elem, data } = nodeObj;
         const startCoords = getCoords(elem);
-        
+
         // Start from the left edge of the professional node
         const start = { x: startCoords.leftEdge, y: startCoords.y };
-        
+
         data.connections.forEach(targetId => {
             if (domNodes.takeaways[targetId]) {
                 const endCoords = getCoords(domNodes.takeaways[targetId].elem);
@@ -323,24 +324,24 @@ function drawConnections() {
 
 function createLine(svg, start, end, sourceId, targetId, isVertical = false) {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    
+
     let d;
     if (isVertical) {
         d = `M ${start.x} ${start.y} L ${end.x} ${end.y}`;
     } else {
         // Draw a nice curved path (bezier) instead of a straight line
         const dx = Math.abs(end.x - start.x);
-        const controlPointX = start.x + (end.x > start.x ? dx/2 : -dx/2);
+        const controlPointX = start.x + (end.x > start.x ? dx / 2 : -dx / 2);
         d = `M ${start.x} ${start.y} C ${controlPointX} ${start.y}, ${controlPointX} ${end.y}, ${end.x} ${end.y}`;
     }
-    
+
     path.setAttribute('d', d);
     path.classList.add('connection-line');
     if (isVertical) path.classList.add('time-line');
-    
+
     path.setAttribute('data-source', sourceId);
     path.setAttribute('data-target', targetId);
-    
+
     svg.appendChild(path);
 }
 
@@ -357,16 +358,16 @@ function setupHoverTooltips() {
                 if (domNodes.academic[nodeId]) dataObj = domNodes.academic[nodeId].data;
                 else if (domNodes.professional[nodeId]) dataObj = domNodes.professional[nodeId].data;
                 else if (domNodes.takeaways[nodeId]) dataObj = domNodes.takeaways[nodeId].data;
-                
+
                 if (dataObj) {
                     const modalBody = document.getElementById('mobile-modal-body');
                     const type = node.getAttribute('data-type');
-                    
+
                     const titleEn = dataObj.title_en || '';
                     const titleEs = dataObj.title_es || '';
                     const isQuantum = titleEn.toLowerCase().includes('quantum') || titleEs.toLowerCase().includes('quantum') || titleEn.toLowerCase().includes('qiskit');
                     const isSistemas = titleEn.toLowerCase().includes('utn') || titleEs.toLowerCase().includes('utn');
-                    
+
                     let quantumGallery = '';
                     if (isQuantum) {
                         quantumGallery = `
@@ -409,7 +410,7 @@ function setupHoverTooltips() {
                             ${quantumGallery}
                         `;
                     }
-                    
+
                     document.getElementById('mobile-modal').classList.add('show');
                 }
             }
@@ -419,7 +420,7 @@ function setupHoverTooltips() {
         node.addEventListener('mouseenter', (e) => {
             const nodeId = node.getAttribute('data-id');
             const connections = JSON.parse(node.getAttribute('data-connections') || '[]');
-            
+
             // Highlight connections and dim others
             const lines = document.querySelectorAll('.connection-line');
             lines.forEach(line => {
@@ -459,7 +460,7 @@ function setupHoverTooltips() {
                 line.classList.remove('highlight');
                 line.style.opacity = '1';
             });
-            
+
             // Remove node highlights
             document.querySelectorAll('.takeaway-node.highlight-node').forEach(tNode => {
                 tNode.classList.remove('highlight-node');
@@ -479,13 +480,13 @@ function setupHoverTooltips() {
 function initMobileModal() {
     const modal = document.getElementById('mobile-modal');
     const closeBtn = document.getElementById('close-modal');
-    
+
     if (!modal || !closeBtn) return;
-    
+
     closeBtn.addEventListener('click', () => {
         modal.classList.remove('show');
     });
-    
+
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.classList.remove('show');
@@ -495,32 +496,34 @@ function initMobileModal() {
 
 function renderProjects() {
     const projects = [
-        { title: "Proyecto-Game2d-Keila", desc: "A 2D game project.", link: "https://github.com/patoleonel/Proyecto-Game2d-Keila", isVideo: false, image: "images/proyecto game 2d keila.webp" },
-        { title: "Calculadora-Finanzas", desc: "Financial calculator.", link: "https://github.com/patoleonel/Calculadora-Finanzas", isVideo: false, image: "images/calculadora-finanazas-chi.webp" },
-        { title: "quantum-experiments", desc: "Quantum computing experiments.", link: "https://github.com/patoleonel/quantum-experiments", isVideo: false },
-        { title: "Cambiador-formato-imagenes-JPG", desc: "Image format converter to JPG.", link: "https://github.com/patoleonel/Cambiador-formato-imagenes-JPG", isVideo: false },
-        { title: "LLM-Local-RAG", desc: "First approach to creating an LLM locally.", link: "https://github.com/patoleonel/LLM-Local-RAG", isVideo: false },
-        { title: "It Llamado a Guillermo", desc: "Directed short film.", link: "https://youtu.be/sDokqDf6Vs8", isVideo: true, image: "images/ShortFilm_ItLLamadoAGuillermo.webp" },
-        { title: "Cabo Suelto", desc: "Directed short film.", link: "https://youtu.be/x1ZohSq_Gro", isVideo: true, image: "images/shortFilm_CaboSuelto.webp" },
-        { title: "Largas Noches", desc: "Directed short film.", link: "https://youtu.be/1vDeaQuE1DQ", isVideo: true, image: "images/ShortFilm_Largasnoches.webp" }
+        { title: "Sincronizador-Precios-Proveedores", desc_en: "Automated data pipeline in Python to synchronize supplier prices in Tiendanube.", desc_es: "Pipeline de datos automatizado en Python para sincronizar precios de proveedores en Tiendanube.", link: "https://github.com/patoleonel/Sincronizador-Precios-Proveedores", isVideo: false, image: "images/der_egolf.svg" },
+        { title: "Proyecto-Game2d-Keila", desc_en: "A 2D game project.", desc_es: "Un proyecto de juego en 2D.", link: "https://github.com/patoleonel/Proyecto-Game2d-Keila", isVideo: false, image: "images/proyecto game 2d keila.webp" },
+        { title: "Calculadora-Finanzas", desc_en: "Financial calculator.", desc_es: "Calculadora financiera.", link: "https://github.com/patoleonel/Calculadora-Finanzas", isVideo: false, image: "images/calculadora-finanazas-chi.webp" },
+        { title: "quantum-experiments", desc_en: "Quantum computing experiments.", desc_es: "Experimentos de computación cuántica.", link: "https://github.com/patoleonel/quantum-experiments", isVideo: false },
+        { title: "Cambiador-formato-imagenes-JPG", desc_en: "Image format converter to JPG.", desc_es: "Conversor de formato de imágenes a JPG.", link: "https://github.com/patoleonel/Cambiador-formato-imagenes-JPG", isVideo: false },
+        { title: "LLM-Local-RAG", desc_en: "First approach to creating an LLM locally.", desc_es: "Primer acercamiento a la creación de un LLM localmente.", link: "https://github.com/patoleonel/LLM-Local-RAG", isVideo: false },
+        { title: "It Llamado a Guillermo", desc_en: "Directed short film.", desc_es: "Cortometraje dirigido.", link: "https://youtu.be/sDokqDf6Vs8", isVideo: true, image: "images/ShortFilm_ItLLamadoAGuillermo.webp" },
+        { title: "Cabo Suelto", desc_en: "Directed short film.", desc_es: "Cortometraje dirigido.", link: "https://youtu.be/x1ZohSq_Gro", isVideo: true, image: "images/shortFilm_CaboSuelto.webp" },
+        { title: "Largas Noches", desc_en: "Directed short film.", desc_es: "Cortometraje dirigido.", link: "https://youtu.be/1vDeaQuE1DQ", isVideo: true, image: "images/ShortFilm_Largasnoches.webp" }
     ];
 
     const grid = document.getElementById('projects-grid');
     grid.innerHTML = '';
-    
+
     projects.forEach(repo => {
         const card = document.createElement('div');
         card.className = 'project-card';
-        
-        let linkText = "View Project →";
-        if (repo.isVideo) linkText = "Watch on YouTube →";
+
+        let linkText = currentLang === 'es' ? "Ver Proyecto →" : "View Project →";
+        if (repo.isVideo) linkText = currentLang === 'es' ? "Ver en YouTube →" : "Watch on YouTube →";
 
         const imgHtml = repo.image ? `<img src="${repo.image}" alt="${repo.title}">` : '';
+        const desc = repo[`desc_${currentLang}`];
 
         card.innerHTML = `
             ${imgHtml}
             <h3>${repo.title.replace(/-/g, ' ')}</h3>
-            <p>${repo.desc}</p>
+            <p>${desc}</p>
             <a href="${repo.link}" target="_blank">${linkText}</a>
         `;
         grid.appendChild(card);
