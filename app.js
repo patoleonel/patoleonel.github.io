@@ -497,9 +497,33 @@ function initMobileModal() {
 function renderProjects() {
     const projects = [
         { title: "Sincronizador-Precios-Proveedores", desc_en: "Automated data pipeline in Python to synchronize supplier prices in Tiendanube.", desc_es: "Pipeline de datos automatizado en Python para sincronizar precios de proveedores en Tiendanube.", link: "https://github.com/patoleonel/Sincronizador-Precios-Proveedores", isVideo: false, image: "images/der_egolf.svg" },
-        { title: "Proyecto-Game2d-Keila", desc_en: "A 2D game project.", desc_es: "Un proyecto de juego en 2D.", link: "https://github.com/patoleonel/Proyecto-Game2d-Keila", isVideo: false, image: "images/proyecto game 2d keila.webp" },
+        { 
+            title: "Proyecto-Game2d-Keila", 
+            desc_en: "A 2D game project.", 
+            desc_es: "Un proyecto de juego en 2D.", 
+            link: "https://github.com/patoleonel/Proyecto-Game2d-Keila", 
+            liveLink: "https://el-camino-de-keila.com.ar/",
+            liveText_en: "Play Online →",
+            liveText_es: "Jugar Online →",
+            codeText_en: "GitHub Code →",
+            codeText_es: "Código en GitHub →",
+            isVideo: false, 
+            image: "images/proyecto game 2d keila.webp" 
+        },
         {title:"Juego-BotonMasVeloz-MIDI", desc_en:"Script con interfaz TkInter para jugar con teclado Casio Cts1 a quien presiona mas rapido el boton", link: "https://github.com/patoleonel/Juego-BotonMasVeloz-MIDI", isVideo: false},
-        { title: "Calculadora-Finanzas", desc_en: "Financial calculator.", desc_es: "Calculadora financiera.", link: "https://github.com/patoleonel/Calculadora-Finanzas", isVideo: false, image: "images/calculadora-finanazas-chi.webp" },
+        { 
+            title: "Calculadora-Finanzas", 
+            desc_en: "Financial calculator.", 
+            desc_es: "Calculadora financiera.", 
+            link: "https://github.com/patoleonel/Calculadora-Finanzas", 
+            liveLink: "https://calculadora-finanzas-chi.vercel.app/",
+            liveText_en: "View Calculator →",
+            liveText_es: "Ver Calculadora →",
+            codeText_en: "GitHub Code →",
+            codeText_es: "Código en GitHub →",
+            isVideo: false, 
+            image: "images/calculadora-finanazas-chi.webp" 
+        },
         { title: "quantum-experiments", desc_en: "Quantum computing experiments.", desc_es: "Experimentos de computación cuántica.", link: "https://github.com/patoleonel/quantum-experiments", isVideo: false },
         { title: "Cambiador-formato-imagenes-JPG", desc_en: "Image format converter to JPG.", desc_es: "Conversor de formato de imágenes a JPG.", link: "https://github.com/patoleonel/Cambiador-formato-imagenes-JPG", isVideo: false },
         { title: "LLM-Local-RAG", desc_en: "First approach to creating an LLM locally.", desc_es: "Primer acercamiento a la creación de un LLM localmente.", link: "https://github.com/patoleonel/LLM-Local-RAG", isVideo: false },
@@ -521,11 +545,25 @@ function renderProjects() {
         const imgHtml = repo.image ? `<img src="${repo.image}" alt="${repo.title}">` : '';
         const desc = repo[`desc_${currentLang}`];
 
+        let linksHtml = '';
+        if (repo.liveLink) {
+            const liveText = repo[`liveText_${currentLang}`] || (currentLang === 'es' ? "Ver Demo →" : "Live Demo →");
+            const codeText = repo[`codeText_${currentLang}`] || (currentLang === 'es' ? "Ver Código →" : "View Code →");
+            linksHtml = `
+                <div class="project-links">
+                    <a href="${repo.liveLink}" target="_blank" class="live-link">${liveText}</a>
+                    <a href="${repo.link}" target="_blank" class="code-link">${codeText}</a>
+                </div>
+            `;
+        } else {
+            linksHtml = `<a href="${repo.link}" target="_blank">${linkText}</a>`;
+        }
+
         card.innerHTML = `
             ${imgHtml}
             <h3>${repo.title.replace(/-/g, ' ')}</h3>
             <p>${desc}</p>
-            <a href="${repo.link}" target="_blank">${linkText}</a>
+            ${linksHtml}
         `;
         grid.appendChild(card);
     });
