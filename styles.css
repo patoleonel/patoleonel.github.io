@@ -531,7 +531,8 @@ a:hover {
 
 /* Inline Accordion Gallery */
 .quantum-inline-gallery,
-.single-inline-gallery {
+.single-inline-gallery,
+.certificate-inline-gallery {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -561,11 +562,47 @@ a:hover {
     border: 1px solid var(--card-border);
 }
 
+.certificate-inline-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.certificate-inline-gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+}
+
+.cert-link-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cert-link-btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
 .milestone-node:hover .quantum-inline-gallery,
 .sidequests-list li:hover .quantum-inline-gallery,
 .milestone-node:hover .single-inline-gallery,
-.sidequests-list li:hover .single-inline-gallery {
-    max-height: 400px;
+.sidequests-list li:hover .single-inline-gallery,
+.milestone-node:hover .certificate-inline-gallery,
+.sidequests-list li:hover .certificate-inline-gallery {
+    max-height: 600px;
     opacity: 1;
     margin-top: 1rem;
 }
@@ -716,7 +753,8 @@ footer {
     /* Hide details on mobile timeline grid to make it compact */
     .timeline-grid .node-desc, 
     .timeline-grid .quantum-inline-gallery,
-    .timeline-grid .single-inline-gallery {
+    .timeline-grid .single-inline-gallery,
+    .timeline-grid .certificate-inline-gallery {
         display: none !important;
     }
 }

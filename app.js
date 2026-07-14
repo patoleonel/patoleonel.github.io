@@ -43,8 +43,9 @@ const i18n = {
         titleSidequests: "Side Quests",
         sq1: "Golf handicap 13",
         sq2: "Quantum Learner",
-        sq3: "C1 English Course at Wuthering Heights",
+        sq3: "EFSET C1 Advanced Certificate",
         sq4: "Software Developer Course (Data, AI, Cloud)",
+        certLink: "View Official Certificate ↗",
         videoPlaceholder: "Coming soon: English presentation video link"
     },
     es: {
@@ -61,8 +62,9 @@ const i18n = {
         titleSidequests: "Misiones Secundarias",
         sq1: "Hándicap 13 de Golf",
         sq2: "Aprendiz Cuántico",
-        sq3: "Curso de Inglés C1 en Wuthering Heights",
+        sq3: "Certificado EFSET C1 Avanzado",
         sq4: "Desarrollador de software inicial (Datos, IA, Cloud)",
+        certLink: "Ver Certificado Oficial ↗",
         videoPlaceholder: "Próximamente link video presentación en inglés"
     }
 };
@@ -124,8 +126,11 @@ function setLanguage(lang) {
     document.getElementById('title-sidequests').innerText = i18n[lang].titleSidequests;
     document.getElementById('sq-1-text').innerText = i18n[lang].sq1;
     document.getElementById('sq-2-text').innerText = i18n[lang].sq2;
-    document.getElementById('sq-3').innerText = i18n[lang].sq3;
+    document.getElementById('sq-3-text').innerText = i18n[lang].sq3;
     document.getElementById('sq-4').innerText = i18n[lang].sq4;
+
+    const certLinkBtn = document.getElementById('cert-link-text');
+    if (certLinkBtn) certLinkBtn.innerText = i18n[lang].certLink;
 
     const videoText = document.getElementById('video-placeholder-text');
     if (videoText) videoText.innerText = i18n[lang].videoPlaceholder;
